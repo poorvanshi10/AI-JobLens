@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-JobLens — Intelligent Resume Match Analyzer</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --accent: #7c3aed;
+      --accent-light: #f5f3ff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .github-btn {
+      background: var(--text-main);
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .hero {
+      max-width: 800px;
+      margin: 80px auto 40px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin: 0 0 20px 0;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin: 0 auto 32px auto;
+      max-width: 600px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 80px 20px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    }
+
+    .feature-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .architecture-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 60px;
+    }
+
+    .architecture-section h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .tech-stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tech-tag {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">AI-<span>JobLens</span></div>
+    <a href="https://github.com/poorvanshi10/AI-JobLens" class="github-btn">View Code Architecture</a>
+  </nav>
+
+  <header class="hero">
+    <span class="badge">Natural Language Processing + Browser Automation</span>
+    <h1>Transform Messy Job Posts into Structured Match Intelligence</h1>
+    <p>A client-server Chrome extension engineered to parse job descriptions, run high-dimensional text vectorization, and map real-time skill gaps against your resume.</p>
+  </header>
+
+  <main class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>📋 DOM Extraction Pipeline</h3>
+        <p>Lightweight JavaScript content scripts automatically scrape active browser text layers on live platforms like LinkedIn and Naukri dynamically.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🧠 Advanced NLP Preprocessing</h3>
+        <p>Utilizes spaCy frameworks to isolate raw text, strip stop-word noise, and calculate grammatical lemmatization for normalized token arrays.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📐 Mathematical Vector Mapping</h3>
+        <p>Transforms document matrices using scikit-learn TF-IDF vectorizers and applies Cosine Similarity equations for context-aware scoring metrics.</p>
+      </div>
+    </div>
+
+    <section class="architecture-section">
+      <h2>⚙️ Production System Core</h2>
+      <p>The system decouples data presentation from intensive computation. The front-end acts as a seamless text capture wrapper, while an independent Python FastAPI microservice runs statistical machine learning inference loops locally to maintain absolute user text privacy.</p>
+      
+      <div class="tech-stack-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">scikit-learn</span>
+        <span class="tech-tag">spaCy</span>
+        <span class="tech-tag">JavaScript (Manifest V3)</span>
+        <span class="tech-tag">Cosine Similarity</span>
+        <span class="tech-tag">TF-IDF Vector space</span>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
